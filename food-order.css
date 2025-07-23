@@ -1,0 +1,124 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fff8e1, #ffecb3);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #ff7043;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  animation: fadeSlide 1s ease-out;
+}
+
+main {
+  padding: 30px;
+}
+
+.food-section h2 {
+  color: #ff5722;
+  margin-bottom: 15px;
+}
+
+.food-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.food-card {
+  width: 200px;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: zoomIn 0.5s ease;
+  transition: transform 0.3s;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+}
+
+.food-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.food-card button {
+  background: #ff5722;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.food-card button:hover {
+  background: #e64a19;
+}
+
+.cart-section {
+  margin-top: 40px;
+  background: #f9fbe7;
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeSlide 1s ease;
+}
+
+#cart-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#cart-list li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#total {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
